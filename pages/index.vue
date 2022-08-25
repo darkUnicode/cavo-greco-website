@@ -1,23 +1,20 @@
 <template>
-  <div>
-    <v-carousel>
+  <v-container>
+    <v-carousel
+    style="height: 550px">
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
           reverse-transition="fade-transition"
           transition="fade-transition"
       >
-        <v-row>
-          <v-col
-              cols="6"
-          >
-            <v-img :src="item.src" alt="" cover height="100%"/>
-          </v-col>
-          <v-col
-              cols="6">
-            <div class="text text-left text-lg-right p-4 px-xl-5 d-flex align-items-center">
-              <div class="desc w-100">
-                <h2 class="mb-4">PREMIUM STUFFED <br> OLIVES</h2>
+        <v-card
+            max-height="1941">
+          <v-row>
+            <v-col
+                cols="6">
+              <v-card-title>Stuffed olives</v-card-title>
+              <v-card-text>
                 <p class="h5">A GUARANTEED CROWD PLEASER</p>
                 <!-- <p class="h5 mb-4">Email Address: email@info.com</p> -->
                 <div class="row justify-content-end">
@@ -27,15 +24,16 @@
                       free signature brine.</p>
                   </div>
                 </div>
-                <p>
-                  <button type="button" class="btn btn-dark mb-2 py-3 px-4">Contact
-                    Us
-                  </button>
-                </p>
-              </div>
-            </div>
-          </v-col>
-        </v-row>
+              </v-card-text>
+            </v-col>
+
+            <v-col
+                cols="6">
+              <v-img :src="item.src" alt="" cover max-width="2000" />
+            </v-col>
+          </v-row>
+
+        </v-card>
       </v-carousel-item>
 
     </v-carousel>
@@ -45,8 +43,8 @@
         <v-row>
           <v-col
               md="6"
-              class="d-flex align-center">
-            <v-img src="/images/logo/logo.png" alt="cavo greco" width="500px"/>
+              class="my-0 my-auto">
+            <v-img src="/images/logo/logo.png" alt="cavo greco" class="ma-0 ma-auto " contain width="450px"/>
           </v-col>
 
           <v-col
@@ -98,102 +96,221 @@
           <v-col
               cols="12"
               md="6">
-            <ValidationObserver ref="observer" v-slot="{ invalid, handleSubmit  }">
-              <form>
+            <v-card
+                elevation="3"
+                rounded
+                class=" pa-2 mx-auto my-12"
+                max-height="512"
+            >
+              <v-card-title class="d-flex justify-center">
+                <h2>Drop us a message</h2>
+              </v-card-title>
+              <v-card-text>
+                <ValidationObserver ref="observer" v-slot="{ invalid, handleSubmit  }">
+                  <form>
 
-                <ValidationProvider name="Name" rules="required|alpha|min:3|max:25" v-slot="{ errors }">
-                  <v-text-field
-                      v-model="name"
-                      :error-messages="errors"
-                      :counter="10"
-                      label="Name"
-                      prepend-inner-icon="mdi-account"
-                      clearable
-                      required
-                  ></v-text-field>
-                </ValidationProvider>
+                    <ValidationProvider name="Name" rules="required|alpha|min:3|max:25" v-slot="{ errors }">
+                      <v-text-field
+                          v-model="name"
+                          :error-messages="errors"
+                          :counter="10"
+                          label="Name"
+                          prepend-inner-icon="mdi-account"
+                          clearable
+                          required
+                      ></v-text-field>
+                    </ValidationProvider>
 
-                <ValidationProvider name="Email" rules="required|email" v-slot="{ errors }">
-                  <v-text-field
-                      v-model="email"
-                      :error-messages="errors"
-                      label="E-mail"
-                      prepend-inner-icon="mdi-email"
-                      required
-                      clearable
-                      counter
-                  ></v-text-field>
-                </ValidationProvider>
-                <ValidationProvider name="Phone Number" rules="required|numeric" v-slot="{ errors }">
-                  <v-text-field
-                      label="Phone Number"
-                      v-model="phoneNumber"
-                      :error-messages="errors"
-                      prepend-inner-icon="mdi-cellphone"
-                      counter
-                      required
-                      clearable
-                  ></v-text-field>
-                </ValidationProvider>
-                <ValidationProvider name="Message" rules="required" v-slot="{ errors }">
-                  <v-textarea
-                      name="message"
-                      filled
-                      :error-messages="errors"
-                      label="Message"
-                      prepend-inner-icon="mdi-forum"
-                      auto-grow
-                      clearable
-                      counter
-                      v-model="message"
-                  ></v-textarea>
-                </ValidationProvider>
-                <v-btn
-                    class="mr-4"
-                    @click="submit"
-                >
-                  submit
-                </v-btn>
-                <v-btn @click="clear">
-                  clear
-                </v-btn>
-              </form>
-            </ValidationObserver>
+                    <ValidationProvider name="Email" rules="required|email" v-slot="{ errors }">
+                      <v-text-field
+                          v-model="email"
+                          :error-messages="errors"
+                          label="E-mail"
+                          prepend-inner-icon="mdi-email"
+                          required
+                          clearable
+                          counter
+                      ></v-text-field>
+                    </ValidationProvider>
+                    <ValidationProvider name="Phone Number" rules="required|numeric" v-slot="{ errors }">
+                      <v-text-field
+                          label="Phone Number"
+                          v-model="phoneNumber"
+                          :error-messages="errors"
+                          prepend-inner-icon="mdi-cellphone"
+                          counter
+                          required
+                          clearable
+                      ></v-text-field>
+                    </ValidationProvider>
+                    <ValidationProvider name="Message" rules="required" v-slot="{ errors }">
+                      <v-textarea
+                          name="message"
+                          filled
+                          :error-messages="errors"
+                          label="Message"
+                          prepend-inner-icon="mdi-forum"
+                          auto-grow
+                          clearable
+                          counter
+                          v-model="message"
+                      ></v-textarea>
+                    </ValidationProvider>
+                    <div class="g-recaptcha" data-sitekey="6LfnbaghAAAAAJpubPwmenjYK1gwAmgB7mxVAQeW"></div>
+
+                    <v-btn
+                        class="mr-4"
+                        color="green"
+                        @click="submit"
+                    >
+                      submit
+                    </v-btn>
+                    <v-btn
+                        @click="clear">
+                      clear
+                    </v-btn>
+                  </form>
+                </ValidationObserver>
+              </v-card-text>
+            </v-card>
           </v-col>
+
+          <v-divider
+              inset
+              vertical
+              class=""
+          ></v-divider>
+
           <v-col
               cols="12"
               md="6">
+            <v-card
+                elevation="3"
+                rounded
+                class=" pa-2 mx-auto my-12"
+                height="512"
+                max-height="512">
+              <v-card-title class="d-flex justify-center mb-8">
+                <h2>Where to find us</h2>
+              </v-card-title>
+              <v-card-text>
+                <v-row>
+                  <v-col>
+                    <v-input
+                        prepend-icon="mdi-map"
+                        class="mb-0"
+                    >
 
+                      Cavo Greco Foods Inc.
+                      <br>
+                      532 East Meadow Ave,
+                      <br>
+                      East Meadow,
+                      <br>
+                      NY 11554
+
+                    </v-input>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col>
+                    <v-input
+                        prepend-icon="mdi-email"
+                    >
+                      <a href="mailto:info@cavogrecofoods.com">info@cavogrecofoods.com</a>
+                    </v-input>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col>
+                    <v-input
+                        prepend-icon="mdi-phone"
+                    >
+                      <a href="tel:+1-516-424-5181">+1-516-424-5181</a>
+                    </v-input>
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col>
+                    <a class="text-decoration-none" href="https://www.facebook.com/cavogrecofoods" target="_blank">
+                      <v-icon class="px-2 social-icon" color="black">mdi-facebook</v-icon>
+                    </a>
+                    <a class="text-decoration-none" href="https://www.instagram.com/cavogrecofoods/" target="_blank">
+                      <v-icon class="px-2 social-icon" color="black">mdi-instagram</v-icon>
+                    </a>
+                  </v-col>
+                </v-row>
+              </v-card-text>
+            </v-card>
           </v-col>
         </v-row>
       </v-container>
     </template>
-  </div>
+  </v-container>
 </template>
 
 <script>
 export default {
+  head: {
+    script: [
+      {type: 'text/javascript', src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true},
+    ],
+  },
   data() {
     return {
       items: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+          src: '/images/products/1.png',
+          title:'',
+          subtitle:'',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
+          src: '/images/products/2.png',
+          title:'',
+          subtitle:'',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
+          src: '/images/products/3.png',
+          title:'',
+          subtitle:'',
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
+          src: '/images/products/4.png',
+          title:'',
+          subtitle:'',
+        },
+        {
+          src: '/images/products/5.png',
+          title:'',
+          subtitle:'',
+        },
+        {
+          src: '/images/products/6.png',
+          title:'',
+          subtitle:'',
+        },
+        {
+          src: '/images/products/7.png',
+          title:'',
+          subtitle:'',
         },
       ],
       name: '',
       email: '',
-      phoneNumber:'',
+      phoneNumber: '',
       message: '',
     }
   },
+  methods: {
+    clear() {
+      this.name = '';
+      this.email = '';
+      this.phoneNumber = '';
+      this.message = '';
+    },
+    submit() {
+
+    }
+  }
 }
 </script>s
