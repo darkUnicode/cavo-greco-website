@@ -1,35 +1,59 @@
 <template>
   <v-container>
     <v-carousel
-    style="height: 550px">
+        cycle
+        continuous
+        interval="4000"
+        light
+        delimiter-icon="mdi-minus"
+        hide-delimiter-background
+        show-arrows-on-hover
+        style="height: 550px"
+        >
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i"
-          reverse-transition="fade-transition"
-          transition="fade-transition"
+          reverse-transition="scroll-x-reverse-transition"
+          transition="scroll-x-transition"
+
+
       >
         <v-card
             max-height="1941">
           <v-row>
             <v-col
-                cols="6">
-              <v-card-title>Stuffed olives</v-card-title>
+                cols="6"
+                class="text-center">
+              <v-card-title class="d-flex justify-center text-h3">{{ item.title.toUpperCase() }}</v-card-title>
               <v-card-text>
-                <p class="h5">A GUARANTEED CROWD PLEASER</p>
+                <p class="text-h5">{{ item.subtitle }}</p>
                 <!-- <p class="h5 mb-4">Email Address: email@info.com</p> -->
-                <div class="row justify-content-end">
-                  <div class="col-xl-8">
-                    <p>Naturally cured, fleshy colossal olives
-                      from Halkidiki, Greece, bathed in our oil
-                      free signature brine.</p>
-                  </div>
-                </div>
+                <v-row class="text-center">
+                  <v-col cols="12">
+                    <p>{{ item.smallDescription }}</p>
+
+                    <v-row>
+                      <v-col cols="6">
+                        <products-info-dialog
+                            :title="item.title"
+                            :subtitle="item.subtitle"
+                            :src="item.src"
+                            :smallDescription="item.smallDescription"
+                            :description="item.description"
+                        ></products-info-dialog>
+                      </v-col>
+
+                      <v-col cols="6">
+                        <v-btn href="#contact-us-card"> Contact Us</v-btn>
+                      </v-col>
+                    </v-row>
+                  </v-col>
+                </v-row>
               </v-card-text>
             </v-col>
-
             <v-col
                 cols="6">
-              <v-img :src="item.src" alt="" cover max-width="2000" />
+              <v-img :src="item.src" alt="" cover :lazy-src="item.src" max-width="2000"/>
             </v-col>
           </v-row>
 
@@ -101,6 +125,7 @@
                 rounded
                 class=" pa-2 mx-auto my-12"
                 max-height="512"
+                id="contact-us-card"
             >
               <v-card-title class="d-flex justify-center">
                 <h2>Drop us a message</h2>
@@ -250,6 +275,8 @@
 </template>
 
 <script>
+import products from "assets/products";
+
 export default {
   head: {
     script: [
@@ -258,43 +285,7 @@ export default {
   },
   data() {
     return {
-      items: [
-        {
-          src: '/images/products/1.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/2.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/3.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/4.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/5.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/6.png',
-          title:'',
-          subtitle:'',
-        },
-        {
-          src: '/images/products/7.png',
-          title:'',
-          subtitle:'',
-        },
-      ],
+      items: products,
       name: '',
       email: '',
       phoneNumber: '',
@@ -310,7 +301,15 @@ export default {
     },
     submit() {
 
+    },
+    openModal() {
+
     }
   }
 }
-</script>s
+</script>
+
+<style>
+
+</style>
+
