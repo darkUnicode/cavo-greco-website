@@ -1,63 +1,75 @@
 <template>
   <v-container>
     <v-carousel
-        cycle
+
         continuous
         interval="4000"
         light
         delimiter-icon="mdi-minus"
         hide-delimiter-background
         show-arrows-on-hover
-        style="height: 550px"
-        >
+        style="height: 845px"
+    >
+
       <v-carousel-item
           v-for="(item,i) in items"
-          :key="i"
-          reverse-transition="scroll-x-reverse-transition"
-          transition="scroll-x-transition"
-
-
-      >
+          :key="i">
         <v-card
-            max-height="1941">
-          <v-row>
+            max-height="845">
+          <v-row class="d-flex">
             <v-col
-                cols="6"
-                class="text-center">
-              <v-card-title class="d-flex justify-center text-h3">{{ item.title.toUpperCase() }}</v-card-title>
-              <v-card-text>
-                <p class="text-h5">{{ item.subtitle }}</p>
-                <!-- <p class="h5 mb-4">Email Address: email@info.com</p> -->
-                <v-row class="text-center">
-                  <v-col cols="12">
-                    <p>{{ item.smallDescription }}</p>
+                md="6"
+                order="1"
+                order-md="0"
+                class="text-right d-flex">
+              <div class="align-center">
+                <v-card-title class="d-flex justify-end text-h3">{{ item.title.toUpperCase() }}</v-card-title>
+                <v-card-text>
+                  <p class="text-h5">{{ item.subtitle }}</p>
+                  <v-row class="text-center">
+                    <v-col cols="12">
+                      <p>{{ item.smallDescription }}</p>
 
-                    <v-row>
-                      <v-col cols="6">
-                        <products-info-dialog
-                            :title="item.title"
-                            :subtitle="item.subtitle"
-                            :src="item.src"
-                            :smallDescription="item.smallDescription"
-                            :description="item.description"
-                        ></products-info-dialog>
-                      </v-col>
+                      <v-row>
+                        <v-col
+                            cols="6">
+                          <v-btn
+                              color="primary"
+                              dark
+                              @click="productsInfoDialog = !productsInfoDialog"
+                          >
+                            Info
+                          </v-btn>
+                        </v-col>
 
-                      <v-col cols="6">
-                        <v-btn href="#contact-us-card"> Contact Us</v-btn>
-                      </v-col>
-                    </v-row>
-                  </v-col>
-                </v-row>
-              </v-card-text>
+                        <v-col
+                            cols="6">
+                          <v-btn href="#contact-us-card"> Contact Us</v-btn>
+                        </v-col>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+                </v-card-text>
+              </div>
             </v-col>
             <v-col
-                cols="6">
-              <v-img :src="item.src" alt="" cover :lazy-src="item.src" max-width="2000"/>
+                md="6"
+                order="0"
+                order-md="1">
+              <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover/>
             </v-col>
           </v-row>
 
         </v-card>
+            <products-info-dialog
+                              :title="item.title"
+                              :subtitle="item.subtitle"
+                              :src="item.src"
+                              :vegan="item.vegan"
+                              :smallDescription="item.smallDescription"
+                              :description="item.description"
+                              :productsInfoDialog.sync="productsInfoDialog"
+                          ></products-info-dialog>
       </v-carousel-item>
 
     </v-carousel>
@@ -66,12 +78,14 @@
       <v-container>
         <v-row>
           <v-col
+              cols="12"
               md="6"
               class="my-0 my-auto">
             <v-img src="/images/logo/logo.png" alt="cavo greco" class="ma-0 ma-auto " contain width="450px"/>
           </v-col>
 
           <v-col
+              cols="12"
               md="6">
             <h2 class="text-center">WHO WE ARE</h2>
             <p class="text-justify"> We are a family owned food manufacturing and
@@ -124,7 +138,7 @@
                 elevation="3"
                 rounded
                 class=" pa-2 mx-auto my-12"
-                max-height="512"
+                max-height="612"
                 id="contact-us-card"
             >
               <v-card-title class="d-flex justify-center">
@@ -132,9 +146,11 @@
               </v-card-title>
               <v-card-text>
                 <ValidationObserver ref="observer" v-slot="{ invalid, handleSubmit  }">
-                  <form>
+                  <form
+                      ref="form"
+                      @submit.prevent="handleSubmit(submit)">
 
-                    <ValidationProvider name="Name" rules="required|alpha|min:3|max:25" v-slot="{ errors }">
+                    <ValidationProvider name="Name" rules="required|alpha_spaces|min:3|max:25" v-slot="{ errors }">
                       <v-text-field
                           v-model="name"
                           :error-messages="errors"
@@ -181,19 +197,27 @@
                           v-model="message"
                       ></v-textarea>
                     </ValidationProvider>
+                    <v-row>
+                      <v-col>
+                      </v-col>
+                    </v-row>
                     <div class="g-recaptcha" data-sitekey="6LfnbaghAAAAAJpubPwmenjYK1gwAmgB7mxVAQeW"></div>
+                    <v-row>
+                      <v-col>
+                        <v-btn
+                            class="mr-4"
+                            color="green"
 
-                    <v-btn
-                        class="mr-4"
-                        color="green"
-                        @click="submit"
-                    >
-                      submit
-                    </v-btn>
-                    <v-btn
-                        @click="clear">
-                      clear
-                    </v-btn>
+                            type="submit">
+
+                          submit
+                        </v-btn>
+                        <v-btn
+                            @click="clear">
+                          clear
+                        </v-btn>
+                      </v-col>
+                    </v-row>
                   </form>
                 </ValidationObserver>
               </v-card-text>
@@ -214,7 +238,7 @@
                 rounded
                 class=" pa-2 mx-auto my-12"
                 height="512"
-                max-height="512">
+                max-height="612">
               <v-card-title class="d-flex justify-center mb-8">
                 <h2>Where to find us</h2>
               </v-card-title>
@@ -290,6 +314,7 @@ export default {
       email: '',
       phoneNumber: '',
       message: '',
+      productsInfoDialog: false
     }
   },
   methods: {

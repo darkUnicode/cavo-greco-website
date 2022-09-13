@@ -6,8 +6,8 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		titleTemplate: '%s - cavoGrecoWebsite',
-		title: 'cavoGrecoWebsite',
+		titleTemplate: '%s',
+		title: 'Cavo Greco Foods',
 		htmlAttrs: {
 			lang: 'en'
 		},
@@ -18,7 +18,7 @@ export default {
 			{name: 'format-detection', content: 'telephone=no'}
 		],
 		link: [
-			{rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+			{rel: 'icon', type: 'image/x-icon', href: '/images/logo/favicon.ico'},
 			{rel: 'preconnect', href: 'https://fonts.googleapis.com'},
 			{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'true'},
 			{href: 'https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap', rel: 'stylesheet'},
