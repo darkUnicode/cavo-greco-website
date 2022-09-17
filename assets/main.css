@@ -1,11 +1,87 @@
 * {
     font-family: 'Arsenal', sans-serif;
+    font-size: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  scroll-margin-top: 170px;
 }
 
 h2, h3, h4, h5, h6 {
     font-family: 'Radley', serif;
 }
+.fs-20 {font-size: 20px !important;}
+.fs-22 {font-size: 22px !important;letter-spacing: 3px !important}
+.fs-48 {font-size: 48px !important; font-weight: 700 !important}
+a {
+  text-decoration: none;
+  color: white !important;
+}
+.customCarousel {
+  min-height: 550px;
+}
 
-.text-decoration-none {
-    text-decoration: none;
+.buttonGroups {
+  position: absolute;
+  bottom: 60px;
+  width:100%;
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .container {
+    scroll-margin-top: 50px;
+  }
+  .v-image.v-responsive.v-carousel__item {
+    height: 1000px !important;
+  }
+  .customCarousel {
+    min-height: 950px;
+  }
+  .buttonGroups {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: unset;
+  }
+
+  .fs-48 {font-size: 24px !important; font-weight: 700 !important;}
+  .fs-20 {font-size: 18px !important}
+  .fs-22 {font-size: 20px !important}
+}
+@media (min-width: 600px) and (max-width: 959px) {
+  .container {
+    scroll-margin-top: 50px;
+  }
+  .buttonGroups {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: unset;
+  }
+  .v-image.v-responsive.v-carousel__item {
+    height: 1000px !important;
+  }
+  .customCarousel {
+    min-height: 950px;
+  }
+
+  .fs-48 {font-size: 30px !important; font-weight: 700 !important;}
+  .fs-20 {font-size: 18px !important}
+  .fs-22 {font-size: 20px !important}
+}
+@media (min-width: 960px) and (max-width: 1264px) {
+  .buttonGroups {
+    text-align: center;
+    padding-bottom: 30px;
+    position: relative;
+    bottom: unset;
+  }
+
+  .fs-48 {font-size: 32px !important; font-weight: 700 !important;}
+  .fs-20 {font-size: 18px !important}
+  .fs-22 {font-size: 20px !important}
 }

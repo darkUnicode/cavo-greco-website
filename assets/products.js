@@ -1,6 +1,6 @@
 const products = [
 	{
-		src: '/images/products/halloumi-ravioli.png',
+		src: '/images/products/halloumi-ravioli.jpg',
 		title: 'Halloumi Ravioli',
 		subtitle: '',
 		vegan: false,
@@ -8,7 +8,7 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/sundried-tomato-ravioli.png',
+		src: '/images/products/sundried-tomato-ravioli.jpg',
 		title: 'Sundried Tomato Ravioli',
 		subtitle: 'Our signature ravioli bursting with flavors of sundried tomato, fresh basil leaves, and luscious ricotta cheese.',
 		smallDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
@@ -16,7 +16,7 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/vegan-artichoke-ravioli.png',
+		src: '/images/products/vegan-artichoke-ravioli.jpg',
 		title: 'Vegan Artichoke Ravioli',
 		subtitle: '',
 		vegan: true,
@@ -24,7 +24,7 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/creamy-spinach-ravioli.png',
+		src: '/images/products/creamy-spinach-ravioli.jpg',
 		title: 'Creamy Spinach Ravioli',
 		subtitle: '',
 		vegan: false,
@@ -32,7 +32,7 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/four-cheese-ravioli.png',
+		src: '/images/products/four-cheese-ravioli.jpg',
 		title: 'Four Cheese Ravioli',
 		subtitle: '',
 		vegan: false,
@@ -40,7 +40,7 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/vegan-mushroom-ravioli.png',
+		src: '/images/products/vegan-mushroom-ravioli.jpg',
 		title: 'Vegan Mushroom Ravioli',
 		subtitle: '',
 		vegan: true,
@@ -48,21 +48,21 @@ const products = [
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/halloumi-fries.png',
+		src: '/images/products/halloumi-fries.jpg',
 		title: 'Halloumi Fries',
 		subtitle: 'QUICK & EASY APPETIZER OR SIDE',
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/beef-kibbeh.png',
+		src: '/images/products/beef-kibbeh.jpg',
 		title: 'Beef Kibbeh',
 		subtitle: '',
 		smallDescription: 'A staple Mediterranean & Middle Eastern dish, also known as Koùpes or Kubbah',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
 	{
-		src: '/images/products/kibbeh-bites.png',
+		src: '/images/products/kibbeh-bites.jpg',
 		title: 'Beef Kibbeh Bites',
 		subtitle: 'The perfect finger food',
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
@@ -122,14 +122,14 @@ const products = [
 					flavor.`
 	},
 	{
-		src: '/images/products/pita-pizza-halloumi.png',
+		src: '/images/products/pita-pizza-halloumi.jpg',
 		title: 'Halloumi Pita Pizza',
 		subtitle: 'A GOURMET ALTERNATIVE TO MARGHERITA',
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
 		description: ''
 	},
 	{
-		src: '/images/products/pita-pizza-mozzarella.png',
+		src: '/images/products/pita-pizza-mozzarella.jpg',
 		title: 'Mozzarella Pita Pizza',
 		subtitle: 'A SKINNY ALTERNATIVE TO MARGHERITA',
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',

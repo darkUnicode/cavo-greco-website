@@ -1,94 +1,86 @@
 <template>
-  <v-container>
+  <v-container class="my-5" id="our_foods">
     <v-carousel
-
+        class="customCarousel"
         continuous
         interval="4000"
-        light
-        delimiter-icon="mdi-minus"
+        dark
+        delimiter-icon="mdi-circle"
         hide-delimiter-background
         show-arrows-on-hover
-        style="height: 845px"
     >
 
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i">
-        <v-card
-            max-height="845">
-          <v-row class="d-flex">
+        <v-card class="d-flex ma-auto row" style="width: 100%; max-width: 1200px;background-color: #121212;">
             <v-col
+                cols="12"
                 md="6"
                 order="1"
                 order-md="0"
-                class="text-right d-flex">
-              <div class="align-center">
-                <v-card-title class="d-flex justify-end text-h3">{{ item.title.toUpperCase() }}</v-card-title>
+                class="text-right pa-0 ma-0"
+                style="background-color: #A5D6A7;position: relative;">
+              <div class="d-flex justify-center align-center mt-10">
+                <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black">{{ item.title.toUpperCase() }}</v-card-title>
+              </div>
+              <div class="d-flex justify-center align-center text-center">
                 <v-card-text>
-                  <p class="text-h5">{{ item.subtitle }}</p>
-                  <v-row class="text-center">
+                  <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
+                  <v-row class="text-center mt-3">
                     <v-col cols="12">
-                      <p>{{ item.smallDescription }}</p>
-
-                      <v-row>
-                        <v-col
-                            cols="6">
-                          <v-btn
-                              color="primary"
-                              dark
-                              @click="productsInfoDialog = !productsInfoDialog"
-                          >
-                            Info
-                          </v-btn>
-                        </v-col>
-
-                        <v-col
-                            cols="6">
-                          <v-btn href="#contact-us-card"> Contact Us</v-btn>
-                        </v-col>
-                      </v-row>
+                      <p class="mx-auto" style="color: black;width: 90%;">{{ item.smallDescription }}</p>
                     </v-col>
                   </v-row>
                 </v-card-text>
               </div>
+              <div class="buttonGroups">
+                <v-btn
+                  color="#388E3C"
+                  dark
+                  @click="productsInfoDialog = !productsInfoDialog"
+                >
+                  Info
+                </v-btn>
+                <v-btn color="#616161" class="ml-3" href="#contact_us">Contact Us</v-btn>
+              </div>
             </v-col>
             <v-col
+                cols="12"
                 md="6"
                 order="0"
-                order-md="1">
-              <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover/>
+                order-md="1"
+                class="pa-0"
+            >
+              <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover />
             </v-col>
-          </v-row>
-
         </v-card>
-            <products-info-dialog
-                              :title="item.title"
-                              :subtitle="item.subtitle"
-                              :src="item.src"
-                              :vegan="item.vegan"
-                              :smallDescription="item.smallDescription"
-                              :description="item.description"
-                              :productsInfoDialog.sync="productsInfoDialog"
-                          ></products-info-dialog>
+
+        <ProductsInfoDialog
+            :title="item.title"
+            :subtitle="item.subtitle"
+            :src="item.src"
+            :vegan="item.vegan"
+            :smallDescription="item.smallDescription"
+            :description="item.description"
+            :productsInfoDialog.sync="productsInfoDialog"
+        />
       </v-carousel-item>
 
     </v-carousel>
 
     <template>
-      <v-container>
-        <v-row>
+      <v-container style="width: 100%; max-width: 1200px;" id="who_we_are">
+        <v-row class="my-10">
           <v-col
               cols="12"
-              md="6"
-              class="my-0 my-auto">
-            <v-img src="/images/logo/logo.png" alt="cavo greco" class="ma-0 ma-auto " contain width="450px"/>
+              class="d-flex align-center justify-center">
+            <h2 class="text-center mb-8 fs-22">WHO WE ARE</h2>
           </v-col>
 
-          <v-col
-              cols="12"
-              md="6">
-            <h2 class="text-center">WHO WE ARE</h2>
-            <p class="text-justify"> We are a family owned food manufacturing and
+          <v-col cols="12" class="text-center">
+            <p>
+              We are a family owned food manufacturing and
               distributing company based on Long Island, NY. We
               specialize in foods inspired by the region of the
               Mediterranean.
@@ -100,49 +92,63 @@
               our products to the Food Service and Retail sectors. Our
               products range from bite-size snacks to full-size meals
               perfect for anytime of the day.
-              <br><br>
+            </p>
+          </v-col>
+          <v-col cols="12" md="5" class="d-flex align-center">
+            <p class="text-center text-md-right">
               Our story began in Cyprus, on the sunny coast of Cavo
               Greco, in the heart of the Mediterranean Sea. From Cavo
               Greco to the bustling streets of New York City our passion
               for good food travelled with us.
+            </p>
+          </v-col>
+          <v-col cols="12" md="2" class="d-flex justify-center align-center">
+            <div style="background-color: white" class="pa-4">
+              <img src="/images/logo/logo.png" alt="cavo greco" width="100%" style="max-width: 250px"  />
+            </div>
+          </v-col>
+          <v-col cols="12" md="5" class="d-flex align-center">
+            <p class="text-md-left text-center">
               With that spirit in mind, we've put together a series of
               recipes that bring exciting flavors of our past back to live.
               With passion and dedication we perfected each one of our
               recipes.
-              <br><br>
+            </p>
+          </v-col>
 
+          <v-col cols="12" class="text-center">
+            <p>
               All of our signature products were lovingly crafted to
               unlock our culture in just a few bites. Our recipes, like our
               journey, are about integrating our nostalgia for our
               Mediterranean home into the fast-paced lifestyle of our
               new home, in New York.
               <br><br>
-
               They are about people coming together and creating
               memorable moments; they are about the distant home that
               we miss and recreate in every meal.
             </p>
-
           </v-col>
+
         </v-row>
       </v-container>
     </template>
 
     <template>
-      <v-container>
-        <v-row>
+      <v-container id="message_us">
+        <v-row class="my-5">
           <v-col
-              cols="12"
-              md="6">
+              cols="12">
             <v-card
                 elevation="3"
                 rounded
-                class=" pa-2 mx-auto my-12"
-                max-height="612"
+                class="pa-8 mx-auto"
+                max-width="900"
                 id="contact-us-card"
+                style="border-radius: 15px !important;"
             >
               <v-card-title class="d-flex justify-center">
-                <h2>Drop us a message</h2>
+                <h2 class="fs-22">DROP US A MESSAGE</h2>
               </v-card-title>
               <v-card-text>
                 <ValidationObserver ref="observer" v-slot="{ invalid, handleSubmit  }">
@@ -202,7 +208,7 @@
                       </v-col>
                     </v-row>
                     <div class="g-recaptcha" data-sitekey="6LfnbaghAAAAAJpubPwmenjYK1gwAmgB7mxVAQeW"></div>
-                    <v-row>
+                    <v-row class="py-5">
                       <v-col>
                         <v-btn
                             class="mr-4"
@@ -213,6 +219,7 @@
                           submit
                         </v-btn>
                         <v-btn
+                            color="#616161"
                             @click="clear">
                           clear
                         </v-btn>
@@ -223,70 +230,73 @@
               </v-card-text>
             </v-card>
           </v-col>
+        </v-row>
+      </v-container>
+    </template>
 
-          <v-divider
-              inset
-              vertical
-              class=""
-          ></v-divider>
-
+    <template>
+      <v-container id="contact_us">
+        <v-row class="my-5">
           <v-col
-              cols="12"
-              md="6">
+              cols="12">
             <v-card
                 elevation="3"
                 rounded
-                class=" pa-2 mx-auto my-12"
-                height="512"
-                max-height="612">
+                class="pa-8 mx-auto"
+                max-width="1200"
+                style="border-radius: 15px !important;"
+            >
               <v-card-title class="d-flex justify-center mb-8">
-                <h2>Where to find us</h2>
+                <h2 class="fs-22">WHERE TO FIND US</h2>
               </v-card-title>
               <v-card-text>
                 <v-row>
-                  <v-col>
-                    <v-input
-                        prepend-icon="mdi-map"
-                        class="mb-0"
-                    >
-
-                      Cavo Greco Foods Inc.
-                      <br>
-                      532 East Meadow Ave,
-                      <br>
-                      East Meadow,
-                      <br>
-                      NY 11554
-
-                    </v-input>
+                  <v-col cols="12" md="6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504.62041277832515!2d-73.55645523809454!3d40.71129241774923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27e74fbee7027%3A0x1e458f004a93db34!2zNTMyIEUgTWVhZG93IEF2ZSwgRWFzdCBNZWFkb3csIE5ZIDExNTU0LCDOl869z4nOvM6tzr3Otc-CIM6gzr_Ou865z4TOtc6vzrXPgg!5e0!3m2!1sel!2s!4v1663434324080!5m2!1sel!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </v-col>
-                </v-row>
-                <v-row>
-                  <v-col>
-                    <v-input
-                        prepend-icon="mdi-email"
-                    >
-                      <a href="mailto:info@cavogrecofoods.com">info@cavogrecofoods.com</a>
-                    </v-input>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col>
-                    <v-input
-                        prepend-icon="mdi-phone"
-                    >
-                      <a href="tel:+1-516-424-5181">+1-516-424-5181</a>
-                    </v-input>
-                  </v-col>
-                </v-row>
-                <v-row>
-                  <v-col>
-                    <a class="text-decoration-none" href="https://www.facebook.com/cavogrecofoods" target="_blank">
-                      <v-icon class="px-2 social-icon" color="black">mdi-facebook</v-icon>
-                    </a>
-                    <a class="text-decoration-none" href="https://www.instagram.com/cavogrecofoods/" target="_blank">
-                      <v-icon class="px-2 social-icon" color="black">mdi-instagram</v-icon>
-                    </a>
+                  <v-col cols="12" md="6">
+                    <v-card class="row ma-0 pa-0" style="border:none; box-shadow: none;">
+                      <v-col cols="12">
+                        <p class="fs-20">ADDRESS</p>
+                        <v-input
+                          prepend-icon="mdi-map"
+                          class="mb-0"
+                        >
+                          Cavo Greco Foods Inc.
+                          <br>
+                          532 East Meadow Ave,
+                          <br>
+                          East Meadow,
+                          <br>
+                          NY 11554
+                        </v-input>
+                      </v-col>
+                      <v-col cols="12">
+                        <p class="fs-20">EMAIL</p>
+                        <v-input
+                          prepend-icon="mdi-email"
+                        >
+                          <a href="mailto:info@cavogrecofoods.com" target="_top">info@cavogrecofoods.com</a>
+                        </v-input>
+                      </v-col>
+                      <v-col cols="12">
+                        <p class="fs-20">PHONE</p>
+                        <v-input
+                          prepend-icon="mdi-phone"
+                        >
+                          <a href="tel:0015164245181" target="_top">+1-516-424-5181</a>
+                        </v-input>
+                      </v-col>
+                      <v-col cols="12">
+                        <p class="fs-20">SOCIAL MEDIA</p>
+                        <a href="https://www.facebook.com/cavogrecofoods" target="_blank">
+                          <v-icon class="px-2 social-icon" color="white">mdi-facebook</v-icon>
+                        </a>
+                        <a href="https://www.instagram.com/cavogrecofoods/" target="_blank">
+                          <v-icon class="px-2 social-icon" color="white">mdi-instagram</v-icon>
+                        </a>
+                      </v-col>
+                    </v-card>
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -335,6 +345,5 @@ export default {
 </script>
 
 <style>
-
 </style>
 

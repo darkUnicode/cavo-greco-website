@@ -1,7 +1,10 @@
 <template>
   <v-app dark>
-    <nuxt/>
-  <Footer/>
+    <Header />
+      <div class="fixedHeaderSpace">
+        <nuxt/>
+      </div>
+    <Footer/>
   </v-app>
 </template>
 
@@ -11,3 +14,39 @@ export default {
 
 }
 </script>
+
+<style>
+.fixedHeaderSpace {
+  margin-top: 180px;
+}
+
+/* -- xs -- */
+@media (max-width: 599px) {
+  .fixedHeaderSpace {
+    margin-top: 80px;
+  }
+}
+
+/* -- sm -- */
+@media (min-width: 600px) {
+  .fixedHeaderSpace {
+    margin-top: 80px;
+  }
+}
+/* -- md -- */
+@media (min-width: 960px) {
+  .fixedHeaderSpace {
+    margin-top: 180px;
+  }
+}
+
+/* -- lg -- */
+@media (min-width: 1264px) {
+
+}
+
+/* -- xl -- */
+@media (min-width: 1904px) {
+
+}
+</style>
