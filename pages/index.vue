@@ -19,8 +19,9 @@
                 md="6"
                 order="1"
                 order-md="0"
-                class="text-right pa-0 ma-0"
-                style="background-color: #A5D6A7;position: relative;">
+                class="text-right pa-0 ma-0 secondaryColor"
+
+                style="position: relative;">
               <div class="d-flex justify-center align-center mt-10">
                 <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black">{{ item.title.toUpperCase() }}</v-card-title>
               </div>
@@ -36,13 +37,13 @@
               </div>
               <div class="buttonGroups">
                 <v-btn
-                  color="#388E3C"
+                  color="green"
                   dark
                   @click="productsInfoDialog = !productsInfoDialog"
                 >
                   Info
                 </v-btn>
-                <v-btn color="#616161" class="ml-3" href="#contact_us">Contact Us</v-btn>
+                <v-btn color="mainColor" class="ml-3" href="#contact_us">Contact Us</v-btn>
               </div>
             </v-col>
             <v-col
@@ -94,7 +95,7 @@
               perfect for anytime of the day.
             </p>
           </v-col>
-          <v-col cols="12" md="5" class="d-flex align-center">
+          <v-col cols="12" md="4" class="d-flex align-center">
             <p class="text-center text-md-right">
               Our story began in Cyprus, on the sunny coast of Cavo
               Greco, in the heart of the Mediterranean Sea. From Cavo
@@ -102,12 +103,12 @@
               for good food travelled with us.
             </p>
           </v-col>
-          <v-col cols="12" md="2" class="d-flex justify-center align-center">
-            <div style="background-color: white" class="pa-4">
-              <img src="/images/logo/logo.png" alt="cavo greco" width="100%" style="max-width: 250px"  />
+          <v-col cols="12" md="4" class="d-flex justify-center align-center">
+            <div style="border: 1px solid white" class="pa-4">
+              <img src="/images/logo/logo-white.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"  />
             </div>
           </v-col>
-          <v-col cols="12" md="5" class="d-flex align-center">
+          <v-col cols="12" md="4" class="d-flex align-center">
             <p class="text-md-left text-center">
               With that spirit in mind, we've put together a series of
               recipes that bring exciting flavors of our past back to live.

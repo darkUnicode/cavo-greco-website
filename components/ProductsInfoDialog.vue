@@ -40,7 +40,7 @@
         <v-card-title>More Information</v-card-title>
 
         <v-card-text :v-html="description">
-<!--          {{ description }}-->
+          {{ description }}
         </v-card-text>
 
         <v-card-actions>
