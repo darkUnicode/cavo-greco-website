@@ -23,14 +23,14 @@ export default {
 /* -- xs -- */
 @media (max-width: 599px) {
   .fixedHeaderSpace {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 
 /* -- sm -- */
 @media (min-width: 600px) {
   .fixedHeaderSpace {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 }
 /* -- md -- */

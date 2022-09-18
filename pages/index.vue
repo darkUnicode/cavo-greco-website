@@ -3,6 +3,7 @@
     <v-carousel
         class="customCarousel"
         continuous
+        cycle
         interval="4000"
         dark
         delimiter-icon="mdi-circle"
