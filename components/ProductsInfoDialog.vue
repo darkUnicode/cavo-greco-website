@@ -39,8 +39,8 @@
 
         <v-card-title>More Information</v-card-title>
 
-        <v-card-text :v-html="description">
-          {{ description }}
+        <v-card-text v-html="description">
+
         </v-card-text>
 
         <v-card-actions>

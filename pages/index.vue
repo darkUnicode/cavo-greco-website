@@ -3,7 +3,7 @@
     <v-carousel
         class="customCarousel"
         continuous
-        cycle
+        :cycle="!productsInfoDialog"
         interval="4000"
         dark
         delimiter-icon="mdi-circle"
@@ -14,17 +14,17 @@
       <v-carousel-item
           v-for="(item,i) in items"
           :key="i">
-        <v-card class="d-flex ma-auto row" style="width: 100%; max-width: 1200px;background-color: #121212;">
-            <v-col
+        <v-card class="d-flex ma-auto row" style="width: 100%; max-width: 1200px;
+        background-color: #121212;">
+           <v-col
                 cols="12"
                 md="6"
                 order="1"
                 order-md="0"
                 class="text-right pa-0 ma-0 secondaryColor"
-
                 style="position: relative;">
               <div class="d-flex justify-center align-center mt-10">
-                <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black">{{ item.title.toUpperCase() }}</v-card-title>
+                <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
               </div>
               <div class="d-flex justify-center align-center text-center">
                 <v-card-text>
@@ -40,7 +40,7 @@
                 <v-btn
                   color="green"
                   dark
-                  @click="productsInfoDialog = !productsInfoDialog"
+                  @click="itemInfo(item)"
                 >
                   Info
                 </v-btn>
@@ -57,19 +57,19 @@
               <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover />
             </v-col>
         </v-card>
-
-        <ProductsInfoDialog
-            :title="item.title"
-            :subtitle="item.subtitle"
-            :src="item.src"
-            :vegan="item.vegan"
-            :smallDescription="item.smallDescription"
-            :description="item.description"
-            :productsInfoDialog.sync="productsInfoDialog"
-        />
       </v-carousel-item>
-
     </v-carousel>
+
+    <ProductsInfoDialog
+        :title.sync="item.title"
+        :subtitle.sync="item.subtitle"
+        :src.sync="item.src"
+        :vegan.sync="item.vegan"
+        :smallDescription.sync="item.smallDescription"
+        :description.sync="item.description"
+        :productsInfoDialog.sync="productsInfoDialog"
+    />
+
 
     <template>
       <v-container style="width: 100%; max-width: 1200px;" id="who_we_are">
@@ -80,7 +80,7 @@
             <h2 class="text-center mb-8 fs-22">WHO WE ARE</h2>
           </v-col>
 
-          <v-col cols="12" class="text-center">
+          <v-col cols="12" class="text-justify">
             <p>
               We are a family owned food manufacturing and
               distributing company based on Long Island, NY. We
@@ -97,7 +97,7 @@
             </p>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
-            <p class="text-center text-md-right">
+            <p class="text-justify ">
               Our story began in Cyprus, on the sunny coast of Cavo
               Greco, in the heart of the Mediterranean Sea. From Cavo
               Greco to the bustling streets of New York City our passion
@@ -106,11 +106,11 @@
           </v-col>
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
             <div style="border: 1px solid white" class="pa-4">
-              <img src="/images/logo/logo-white.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"  />
+              <img src="/images/logo/logo-white1.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"  />
             </div>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
-            <p class="text-md-left text-center">
+            <p class="text-justify">
               With that spirit in mind, we've put together a series of
               recipes that bring exciting flavors of our past back to live.
               With passion and dedication we perfected each one of our
@@ -118,7 +118,7 @@
             </p>
           </v-col>
 
-          <v-col cols="12" class="text-center">
+          <v-col cols="12" class="text-justify">
             <p>
               All of our signature products were lovingly crafted to
               unlock our culture in just a few bites. Our recipes, like our
@@ -326,7 +326,8 @@ export default {
       email: '',
       phoneNumber: '',
       message: '',
-      productsInfoDialog: false
+      productsInfoDialog: false,
+      item:[]
     }
   },
   methods: {
@@ -339,7 +340,9 @@ export default {
     submit() {
 
     },
-    openModal() {
+    itemInfo(item) {
+      this.item = item;
+      this.productsInfoDialog = true
 
     }
   }
