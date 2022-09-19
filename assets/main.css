@@ -10,9 +10,7 @@ html {
   scroll-margin-top: 170px;
 }
 
-h2, h3, h4, h5, h6 {
-    font-family: 'Radley', serif;
-}
+
 .fs-20 {font-size: 20px !important;}
 .fs-22 {font-size: 22px !important;letter-spacing: 3px !important}
 .fs-48 {font-size: 48px !important; font-weight: 700 !important}
