@@ -17,7 +17,7 @@
           <v-col md="5">
             <div class="d-flex justify-center justify-md-start align-center" style="height: 100%;">
               <div><a class="pa-1 pa-sm-5 navLinks" href="#message_us">Message Us</a></div>
-              <div><a class="pa-1 pa-sm-5 navLinks" href="#contact_us">Contact Us</a></div>
+              <div><a class="pa-1 pa-sm-5 navLinks" href="#find_us">Find Us</a></div>
             </div>
           </v-col>
         </v-row>
@@ -72,7 +72,7 @@ export default {
       {title: 'Our Foods', path: '#our_foods'},
       {title: 'Who We Are', path: '#who_we_are'},
       {title: 'Message Us', path: '#message_us'},
-      {title: 'Contact Us', path: '#contact_us'},
+      {title: 'Contact Us', path: '#find_us'},
     ],
   }),
 };

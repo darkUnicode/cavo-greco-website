@@ -1,75 +1,68 @@
 <template>
-  <v-container class="my-5" id="our_foods">
-    <v-carousel
-        class="customCarousel"
-        continuous
-        :cycle="!productsInfoDialog"
-        interval="4000"
-        dark
-        delimiter-icon="mdi-circle"
-        hide-delimiter-background
-        show-arrows-on-hover
-    >
+  <div>
+    <template>
+      <v-container class="my-5" id="our_foods">
+        <v-carousel
+            class="customCarousel"
+            continuous
+            :cycle="productsInfoDialog"
+            interval="4000"
+            dark
+            delimiter-icon="mdi-minus"
+            hide-delimiter-background
+            show-arrows-on-hover
+        >
 
-      <v-carousel-item
-          v-for="(item,i) in items"
-          :key="i">
-        <v-card class="d-flex ma-auto row" style="width: 100%; max-width: 1200px;
+          <v-carousel-item
+              v-for="(item,i) in items"
+              :key="i">
+            <v-card class="d-flex ma-auto row carouselCard" style="width: 100%; max-width: 1200px;
         background-color: #121212;">
-           <v-col
-                cols="12"
-                md="6"
-                order="1"
-                order-md="0"
-                class="text-right pa-0 ma-0 secondaryColor"
-                style="position: relative;">
-              <div class="d-flex justify-center align-center mt-10">
-                <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
-              </div>
-              <div class="d-flex justify-center align-center text-center">
-                <v-card-text>
-                  <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
-                  <v-row class="text-center mt-3">
-                    <v-col cols="12">
-                      <p class="mx-auto" style="color: black;width: 90%;">{{ item.smallDescription }}</p>
-                    </v-col>
-                  </v-row>
-                </v-card-text>
-              </div>
-              <div class="buttonGroups">
-                <v-btn
-                  color="green"
-                  dark
-                  @click="itemInfo(item)"
-                >
-                  Info
-                </v-btn>
-                <v-btn color="mainColor" class="ml-3" href="#contact_us">Contact Us</v-btn>
-              </div>
-            </v-col>
-            <v-col
-                cols="12"
-                md="6"
-                order="0"
-                order-md="1"
-                class="pa-0"
-            >
-              <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover />
-            </v-col>
-        </v-card>
-      </v-carousel-item>
-    </v-carousel>
-
-    <ProductsInfoDialog
-        :title.sync="item.title"
-        :subtitle.sync="item.subtitle"
-        :src.sync="item.src"
-        :vegan.sync="item.vegan"
-        :smallDescription.sync="item.smallDescription"
-        :description.sync="item.description"
-        :productsInfoDialog.sync="productsInfoDialog"
-    />
-
+              <v-col
+                  cols="12"
+                  md="6"
+                  order="1"
+                  order-md="0"
+                  class="text-right pa-0 ma-0 secondaryColor"
+                  style="position: relative;">
+                <div class="d-flex justify-center align-center mt-10">
+                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                </div>
+                <div class="d-flex justify-center align-center text-center">
+                  <v-card-text>
+                    <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
+                    <v-row class="text-center mt-3">
+                      <v-col cols="12">
+                        <p class="mx-auto" style="color: black;width: 90%;">{{ item.smallDescription }}</p>
+                      </v-col>
+                    </v-row>
+                  </v-card-text>
+                </div>
+                <div class="buttonGroups">
+                  <v-btn
+                      color="green"
+                      dark
+                      @click="itemInfo(item)"
+                  >
+                    Info
+                  </v-btn>
+                  <v-btn color="mainColor" class="ml-3" href="#message_us">Contact Us</v-btn>
+                </div>
+              </v-col>
+              <v-col
+                  cols="12"
+                  md="6"
+                  order="0"
+                  order-md="1"
+                  class="pa-0"
+              >
+                <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" contain/>
+              </v-col>
+            </v-card>
+          </v-carousel-item>
+        </v-carousel>
+      </v-container>
+    </template>
 
     <template>
       <v-container style="width: 100%; max-width: 1200px;" id="who_we_are">
@@ -106,7 +99,7 @@
           </v-col>
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
             <div style="border: 1px solid white" class="pa-4">
-              <img src="/images/logo/logo-white1.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"  />
+              <img src="/images/logo/logo-white1.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"/>
             </div>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
@@ -237,7 +230,7 @@
     </template>
 
     <template>
-      <v-container id="contact_us">
+      <v-container id="find_us">
         <v-row class="my-5">
           <v-col
               cols="12">
@@ -254,15 +247,16 @@
               <v-card-text>
                 <v-row>
                   <v-col cols="12" md="6">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504.62041277832515!2d-73.55645523809454!3d40.71129241774923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27e74fbee7027%3A0x1e458f004a93db34!2zNTMyIEUgTWVhZG93IEF2ZSwgRWFzdCBNZWFkb3csIE5ZIDExNTU0LCDOl869z4nOvM6tzr3Otc-CIM6gzr_Ou865z4TOtc6vzrXPgg!5e0!3m2!1sel!2s!4v1663434324080!5m2!1sel!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d504.62041277832515!2d-73.55645523809454!3d40.71129241774923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c27e74fbee7027%3A0x1e458f004a93db34!2zNTMyIEUgTWVhZG93IEF2ZSwgRWFzdCBNZWFkb3csIE5ZIDExNTU0LCDOl869z4nOvM6tzr3Otc-CIM6gzr_Ou865z4TOtc6vzrXPgg!5e0!3m2!1sel!2s!4v1663434324080!5m2!1sel!2s" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                   </v-col>
                   <v-col cols="12" md="6">
                     <v-card class="row ma-0 pa-0" style="border:none; box-shadow: none;">
                       <v-col cols="12">
                         <p class="fs-20">ADDRESS</p>
                         <v-input
-                          prepend-icon="mdi-map"
-                          class="mb-0"
+                            prepend-icon="mdi-map"
+                            class="mb-0"
                         >
                           Cavo Greco Foods Inc.
                           <br>
@@ -276,7 +270,7 @@
                       <v-col cols="12">
                         <p class="fs-20">EMAIL</p>
                         <v-input
-                          prepend-icon="mdi-email"
+                            prepend-icon="mdi-email"
                         >
                           <a href="mailto:info@cavogrecofoods.com" target="_top">info@cavogrecofoods.com</a>
                         </v-input>
@@ -284,7 +278,7 @@
                       <v-col cols="12">
                         <p class="fs-20">PHONE</p>
                         <v-input
-                          prepend-icon="mdi-phone"
+                            prepend-icon="mdi-phone"
                         >
                           <a href="tel:0015164245181" target="_top">+1-516-424-5181</a>
                         </v-input>
@@ -307,7 +301,17 @@
         </v-row>
       </v-container>
     </template>
-  </v-container>
+    <ProductsInfoDialog
+          :title.sync="item.title"
+          :subtitle.sync="item.subtitle"
+          :src.sync="item.src"
+          :vegan.sync="item.vegan"
+          :smallDescription.sync="item.smallDescription"
+          :description.sync="item.description"
+          :productsInfoDialog.sync="productsInfoDialog"
+      />
+
+  </div>
 </template>
 
 <script>
@@ -327,7 +331,7 @@ export default {
       phoneNumber: '',
       message: '',
       productsInfoDialog: false,
-      item:[]
+      item: []
     }
   },
   methods: {
