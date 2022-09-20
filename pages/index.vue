@@ -10,6 +10,7 @@
             dark
             delimiter-icon="mdi-minus"
             hide-delimiter-background
+            :hide-delimiters="hideDelimiters"
             show-arrows-on-hover
         >
 
@@ -70,7 +71,7 @@
           <v-col
               cols="12"
               class="d-flex align-center justify-center">
-            <h2 class="text-center mb-8 fs-22">WHO WE ARE</h2>
+            <h2 class="text-center mb-8 fs-48">WHO WE ARE</h2>
           </v-col>
 
           <v-col cols="12" class="text-justify">
@@ -302,14 +303,14 @@
       </v-container>
     </template>
     <ProductsInfoDialog
-          :title.sync="item.title"
-          :subtitle.sync="item.subtitle"
-          :src.sync="item.src"
-          :vegan.sync="item.vegan"
-          :smallDescription.sync="item.smallDescription"
-          :description.sync="item.description"
-          :productsInfoDialog.sync="productsInfoDialog"
-      />
+        :title.sync="item.title"
+        :subtitle.sync="item.subtitle"
+        :src.sync="item.src"
+        :vegan.sync="item.vegan"
+        :smallDescription.sync="item.smallDescription"
+        :description.sync="item.description"
+        :productsInfoDialog.sync="productsInfoDialog"
+    />
 
   </div>
 </template>
@@ -331,7 +332,8 @@ export default {
       phoneNumber: '',
       message: '',
       productsInfoDialog: false,
-      item: []
+      item: [],
+      // hideDelimiters: false
     }
   },
   methods: {
@@ -341,15 +343,22 @@ export default {
       this.phoneNumber = '';
       this.message = '';
     },
-    submit() {
-
-    },
     itemInfo(item) {
       this.item = item;
       this.productsInfoDialog = true
 
+    },
+  },
+    computed: {
+      hideDelimiters() {
+        console.log(this.$vuetify.breakpoint.sm)
+        if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
+          return  true
+        }else{
+          return false
+        }
+      }
     }
-  }
 }
 </script>
 
