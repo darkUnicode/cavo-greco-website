@@ -1,7 +1,14 @@
 <template>
   <div>
     <template>
-      <v-container class="my-5" id="our_foods">
+      <v-container class="my-5" id="our_products">
+        <v-row class="mb-5">
+          <v-col
+              cols="12"
+              class="d-flex align-center justify-center">
+            <h2 class="text-center mb-8 fs-48">Our Products</h2>
+          </v-col>
+        </v-row>
         <v-carousel
             class="customCarousel"
             continuous
@@ -11,7 +18,7 @@
             delimiter-icon="mdi-minus"
             hide-delimiter-background
             :hide-delimiters="hideDelimiters"
-            show-arrows-on-hover
+            :show-arrows="false"
         >
 
           <v-carousel-item
@@ -25,7 +32,7 @@
                   order="1"
                   order-md="0"
                   class="text-right pa-0 ma-0 secondaryColor"
-                  style="position: relative;">
+                  style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
                   <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
                 </div>
@@ -34,7 +41,7 @@
                     <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
                     <v-row class="text-center mt-3">
                       <v-col cols="12">
-                        <p class="mx-auto" style="color: black;width: 90%;">{{ item.smallDescription }}</p>
+                        <p class="mx-auto" style="color: black; width: 90%;">{{ item.smallDescription }}</p>
                       </v-col>
                     </v-row>
                   </v-card-text>
@@ -57,7 +64,9 @@
                   order-md="1"
                   class="pa-0"
               >
-                <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" contain/>
+                <div style="height: 100%">
+                  <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover style=" border-radius: 0 50px 50px 0;"/>
+                </div>
               </v-col>
             </v-card>
           </v-carousel-item>
@@ -333,7 +342,6 @@ export default {
       message: '',
       productsInfoDialog: false,
       item: [],
-      // hideDelimiters: false
     }
   },
   methods: {
@@ -349,12 +357,12 @@ export default {
 
     },
   },
-    computed: {
-      hideDelimiters() {
-        console.log(this.$vuetify.breakpoint.sm)
-        return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
-      }
+  computed: {
+    hideDelimiters() {
+      console.log(this.$vuetify.breakpoint.sm)
+      return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
     }
+  }
 }
 </script>
 

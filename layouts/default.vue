@@ -1,9 +1,9 @@
 <template>
   <v-app dark>
-    <Header />
-      <div class="fixedHeaderSpace">
-        <nuxt/>
-      </div>
+    <Header/>
+    <v-main class="fixedHeaderSpace">
+      <nuxt/>
+    </v-main>
     <Footer/>
   </v-app>
 </template>
@@ -33,6 +33,7 @@ export default {
     margin-top: 100px;
   }
 }
+
 /* -- md -- */
 @media (min-width: 960px) {
   .fixedHeaderSpace {

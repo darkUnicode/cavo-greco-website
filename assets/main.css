@@ -61,10 +61,10 @@ a {
     bottom: unset;
   }
   .v-image.v-responsive.v-carousel__item {
-    height: 1000px !important;
+    height: 1150px !important;
   }
   .customCarousel {
-    min-height: 950px;
+    min-height: 1150px;
   }
 
   .fs-48 {font-size: 30px !important; font-weight: 700 !important;}
