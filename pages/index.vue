@@ -352,11 +352,7 @@ export default {
     computed: {
       hideDelimiters() {
         console.log(this.$vuetify.breakpoint.sm)
-        if (this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs) {
-          return  true
-        }else{
-          return false
-        }
+        return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
       }
     }
 }
