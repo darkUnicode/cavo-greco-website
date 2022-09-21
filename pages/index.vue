@@ -14,7 +14,6 @@
             continuous
             :cycle="!productsInfoDialog"
             interval="4000"
-            dark
             delimiter-icon="mdi-minus"
             hide-delimiter-background
             :hide-delimiters="hideDelimiters"
@@ -33,14 +32,14 @@
                   class="text-right pa-0 ma-0 mainColor productsDetails"
                   style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
-                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
                 </div>
                 <div class="d-flex justify-center align-center text-center">
                   <v-card-text>
-                    <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
+                    <p class="my-4 fs-20" style="color: white; font-style: italic">{{ item.subtitle }}</p>
                     <v-row class="text-center mt-3">
                       <v-col cols="12">
-                        <p class="mx-auto" style="color: black; width: 90%;">{{ item.smallDescription }}</p>
+                        <p class="mx-auto" style="color: white; width: 90%;">{{ item.smallDescription }}</p>
                       </v-col>
                     </v-row>
                   </v-card-text>
