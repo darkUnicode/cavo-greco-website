@@ -12,7 +12,7 @@
         <v-carousel
             class="customCarousel"
             continuous
-            :cycle="!productsInfoDialog"
+            :cycle="productsInfoDialog"
             interval="4000"
             dark
             delimiter-icon="mdi-minus"
@@ -29,8 +29,8 @@
               <v-col
                   cols="12"
                   md="6"
-                  order="1"
-                  order-md="0"
+                  order="2"
+                  order-md="1"
                   class="text-right pa-0 ma-0 secondaryColor productsDetails"
                   style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
@@ -60,8 +60,8 @@
               <v-col
                   cols="12"
                   md="6"
-                  order="0"
-                  order-md="1"
+                  order="1"
+                  order-md="2"
                   class="pa-0"
               >
                 <div style="height: 100%">
@@ -218,9 +218,7 @@
                         <v-btn
                             class="mr-4"
                             color="green"
-
                             type="submit">
-
                           submit
                         </v-btn>
                         <v-btn
