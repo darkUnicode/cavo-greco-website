@@ -67,6 +67,7 @@ const products = [
 		src: '/images/products/kibbeh-bites.jpg',
 		title: 'Beef Kibbeh Bites',
 		subtitle: 'The perfect finger food',
+		vegan: false,
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
 		description: `Try it as a:
 		<ul>
@@ -95,6 +96,7 @@ const products = [
 	{
 		src: '/images/products/premium-stuffed-olives.jpg',
 		title: 'Premium Stuffed Olives',
+		vegan: false,
 		subtitle: 'A GUARANTEED CROWD PLEASER',
 		smallDescription: 'Naturally cured, fleshy colossal olives from Halkidiki, Greece, bathed in our oil free signature brine.',
 		description: `7 SAVORY STUFFINGS:
@@ -113,6 +115,7 @@ const products = [
 		src: '/images/products/martini-olive-juice.jpg',
 		title: 'Martini Olive Juice',
 		subtitle: 'THE RIGHT INGREDIENT TO MAKE IT DIRTY',
+		vegan: false,
 		smallDescription: 'A highest quality classic mix made with Halkidiki olives.',
 		description: `OLIVE FLAVOR PROFILE:
 		<br>
@@ -130,6 +133,7 @@ const products = [
 		src: '/images/products/pita-pizza-halloumi.jpg',
 		title: 'Halloumi Pita Pizza',
 		subtitle: 'A GOURMET ALTERNATIVE TO MARGHERITA',
+		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
 		description: ''
 	},
@@ -137,6 +141,7 @@ const products = [
 		src: '/images/products/pita-pizza-mozzarella.jpg',
 		title: 'Mozzarella Pita Pizza',
 		subtitle: 'A SKINNY ALTERNATIVE TO MARGHERITA',
+		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	}
