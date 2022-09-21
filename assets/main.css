@@ -51,6 +51,9 @@ a {
 }
 
 @media (max-width: 599px) {
+    #who_we_are {
+        margin-top: -215px;
+    }
     .container {
         scroll-margin-top: 50px;
     }
@@ -95,6 +98,9 @@ a {
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
+    #who_we_are {
+        margin-top: -215px;
+    }
     .container {
         scroll-margin-top: 50px;
     }
@@ -111,7 +117,7 @@ a {
     }
 
     .customCarousel {
-        min-height: 1150px;
+        min-height: 1150px !important;
     }
 
     .fs-48 {
