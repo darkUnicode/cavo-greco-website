@@ -21,7 +21,8 @@ export default {
 			{rel: 'icon', type: 'image/x-icon', href: '/images/logo/favicon.ico'},
 			{rel: 'preconnect', href: 'https://fonts.googleapis.com'},
 			{rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'true'},
-			{href: 'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap', rel: 'stylesheet'}
+			// {href: 'https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap', rel: 'stylesheet'}
+			{href: 'https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Radley:ital@0;1&display=swap', rel: 'stylesheet'}
 		]
 	},
 
@@ -51,7 +52,7 @@ export default {
 	vuetify: {
 		customVariables: ['~/assets/variables.scss'],
 		theme: {
-			dark: true,
+			dark: false,
 			themes: {
 				dark: {
 					primary: colors.blue.darken2,
