@@ -4,82 +4,148 @@
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
+
 .container {
-  scroll-margin-top: 170px;
+    scroll-margin-top: 170px;
 }
 
 
-.fs-20 {font-size: 20px !important;}
-.fs-22 {font-size: 22px !important;letter-spacing: 3px !important}
-.fs-48 {font-size: 48px !important; font-weight: 700 !important}
+.fs-20 {
+    font-size: 20px !important;
+}
+
+.fs-22 {
+    font-size: 22px !important;
+    letter-spacing: 3px !important
+}
+
+.fs-48 {
+    font-size: 48px !important;
+    font-weight: 700 !important
+}
+
 a {
-  text-decoration: none;
-  color: white !important;
+    text-decoration: none;
+    color: white !important;
 }
+
 .customCarousel {
-  min-height: 550px;
+    min-height: 550px;
 }
 
 .buttonGroups {
-  position: absolute;
-  bottom: 60px;
-  width:100%;
-  text-align: center;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.productImage {
+    border-radius: 0 50px 50px 0;
+}
+
+.productsDetails {
+    border-radius: 50px 0 0 50px;
 }
 
 @media (max-width: 599px) {
-  .container {
-    scroll-margin-top: 50px;
-  }
-  .v-image.v-responsive.v-carousel__item {
-    height: 1000px !important;
-  }
-  .customCarousel {
-    min-height: 950px;
-  }
-  .buttonGroups {
-    text-align: center;
-    padding-bottom: 30px;
-    position: relative;
-    bottom: unset;
-  }
+    .container {
+        scroll-margin-top: 50px;
+    }
 
-  .fs-48 {font-size: 24px !important; font-weight: 700 !important;}
-  .fs-20 {font-size: 18px !important}
-  .fs-22 {font-size: 20px !important}
+    .v-image.v-responsive.v-carousel__item {
+        height: 1000px !important;
+    }
+
+    .customCarousel {
+        min-height: 950px;
+    }
+
+    .buttonGroups {
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+        bottom: unset;
+    }
+
+    .fs-48 {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+
+    .fs-20 {
+        font-size: 18px !important
+    }
+
+    .fs-22 {
+        font-size: 20px !important
+    }
 }
+
+@media (max-width: 959px) {
+    .productImage {
+        border-radius: 50px 50px 0 0 !important;
+    }
+
+    .productsDetails {
+        border-radius: 0 0 50px 50px !important;
+    }
+}
+
 @media (min-width: 600px) and (max-width: 959px) {
-  .container {
-    scroll-margin-top: 50px;
-  }
-  .buttonGroups {
-    text-align: center;
-    padding-bottom: 30px;
-    position: relative;
-    bottom: unset;
-  }
-  .v-image.v-responsive.v-carousel__item {
-    height: 1150px !important;
-  }
-  .customCarousel {
-    min-height: 1150px;
-  }
+    .container {
+        scroll-margin-top: 50px;
+    }
 
-  .fs-48 {font-size: 30px !important; font-weight: 700 !important;}
-  .fs-20 {font-size: 18px !important}
-  .fs-22 {font-size: 20px !important}
+    .buttonGroups {
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+        bottom: unset;
+    }
+
+    .v-image.v-responsive.v-carousel__item {
+        height: 1150px !important;
+    }
+
+    .customCarousel {
+        min-height: 1150px;
+    }
+
+    .fs-48 {
+        font-size: 30px !important;
+        font-weight: 700 !important;
+    }
+
+    .fs-20 {
+        font-size: 18px !important
+    }
+
+    .fs-22 {
+        font-size: 20px !important
+    }
 }
-@media (min-width: 960px) and (max-width: 1264px) {
-  .buttonGroups {
-    text-align: center;
-    padding-bottom: 30px;
-    position: relative;
-    bottom: unset;
-  }
 
-  .fs-48 {font-size: 32px !important; font-weight: 700 !important;}
-  .fs-20 {font-size: 18px !important}
-  .fs-22 {font-size: 20px !important}
+@media (min-width: 960px) and (max-width: 1264px) {
+    .buttonGroups {
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+        bottom: unset;
+    }
+
+    .fs-48 {
+        font-size: 32px !important;
+        font-weight: 700 !important;
+    }
+
+    .fs-20 {
+        font-size: 18px !important
+    }
+
+    .fs-22 {
+        font-size: 20px !important
+    }
 }

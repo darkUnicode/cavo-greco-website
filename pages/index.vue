@@ -31,7 +31,7 @@
                   md="6"
                   order="1"
                   order-md="0"
-                  class="text-right pa-0 ma-0 secondaryColor"
+                  class="text-right pa-0 ma-0 secondaryColor productsDetails"
                   style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
                   <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
@@ -65,7 +65,7 @@
                   class="pa-0"
               >
                 <div style="height: 100%">
-                  <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover style=" border-radius: 0 50px 50px 0;"/>
+                  <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover class="productImage"/>
                 </div>
               </v-col>
             </v-card>
@@ -359,7 +359,6 @@ export default {
   },
   computed: {
     hideDelimiters() {
-      console.log(this.$vuetify.breakpoint.sm)
       return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
     }
   }
