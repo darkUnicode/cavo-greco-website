@@ -12,7 +12,7 @@
         <v-carousel
             class="customCarousel"
             continuous
-            :cycle="productsInfoDialog"
+            :cycle="!productsInfoDialog"
             interval="4000"
             dark
             delimiter-icon="mdi-minus"
