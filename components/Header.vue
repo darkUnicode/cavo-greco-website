@@ -11,7 +11,7 @@
           </v-col>
           <v-col md="2">
             <div class="d-flex justify-center align-center ma-auto navImageWrapper">
-              <img src="/images/logo/logo-white.png" alt="cavo greco" class="navImage"/>
+              <img src="/images/logo/logo-no-background.png" alt="cavo greco" class="navImage"/>
             </div>
           </v-col>
           <v-col md="5">
@@ -27,7 +27,7 @@
           <v-col cols="5">
             <div class="d-flex justify-start align-center">
               <!--              <strong>CAVO GRECO</strong>-->
-              <img src="/images/logo/logo-white.png" alt="cavo greco" style="max-width: 70px; width: 100%;"/>
+              <img src="/images/logo/logo-no-background.png" alt="cavo greco" style="max-width: 70px; width: 100%;"/>
             </div>
           </v-col>
           <v-col cols="7">
@@ -82,7 +82,7 @@ export default {
   position: fixed;
   width: 100%;
   padding: 10px;
-  background-color: #1E1E1E;
+  background-color: white;
   z-index: 2;
   border-bottom: 2px solid red;
 }
@@ -90,7 +90,7 @@ export default {
 .navImageWrapper {
   width: 150px;
   /*background-color: white;*/
-  border: 1px solid white;
+  border: 1px solid black;
   padding: 10px;
 }
 
@@ -107,6 +107,6 @@ export default {
 
 .navLinks {
   text-decoration: none;
-  color: white !important;
+  color: black !important;
 }
 </style>

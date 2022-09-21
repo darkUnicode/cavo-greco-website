@@ -14,7 +14,6 @@
             continuous
             :cycle="!productsInfoDialog"
             interval="4000"
-            dark
             delimiter-icon="mdi-minus"
             hide-delimiter-background
             :hide-delimiters="hideDelimiters"
@@ -24,38 +23,37 @@
           <v-carousel-item
               v-for="(item,i) in items"
               :key="i">
-            <v-card class="d-flex ma-auto row carouselCard" style="width: 100%; max-width: 1200px;
-        background-color: #121212;">
+            <v-card class="d-flex ma-auto row carouselCard" style="width: 100%; max-width: 1200px; background-color: white;">
               <v-col
                   cols="12"
                   md="6"
                   order="2"
                   order-md="1"
-                  class="text-right pa-0 ma-0 secondaryColor productsDetails"
+                  class="text-right pa-0 ma-0 mainColor productsDetails"
                   style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
-                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
                 </div>
                 <div class="d-flex justify-center align-center text-center">
                   <v-card-text>
-                    <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
+                    <p class="my-4 fs-20" style="color: white; font-style: italic">{{ item.subtitle }}</p>
                     <v-row class="text-center mt-3">
                       <v-col cols="12">
-                        <p class="mx-auto" style="color: black; width: 90%;">{{ item.smallDescription }}</p>
+                        <p class="mx-auto" style="color: white; width: 90%;">{{ item.smallDescription }}</p>
                       </v-col>
                     </v-row>
                   </v-card-text>
                 </div>
-                <div class="buttonGroups">
-                  <v-btn
-                      color="green"
-                      dark
-                      @click="itemInfo(item)"
-                  >
-                    Info
-                  </v-btn>
-                  <v-btn color="mainColor" class="ml-3" href="#message_us">Contact Us</v-btn>
-                </div>
+<!--                <div class="buttonGroups">-->
+<!--                  <v-btn-->
+<!--                      color="green"-->
+<!--                      dark-->
+<!--                      @click="itemInfo(item)"-->
+<!--                  >-->
+<!--                    Info-->
+<!--                  </v-btn>-->
+<!--                  <v-btn color="mainColor" class="ml-3" href="#message_us">Contact Us</v-btn>-->
+<!--                </div>-->
               </v-col>
               <v-col
                   cols="12"
@@ -108,8 +106,8 @@
             </p>
           </v-col>
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
-            <div style="border: 1px solid white" class="pa-4">
-              <img src="/images/logo/logo-white1.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"/>
+            <div style="border: 1px solid black" class="pa-4">
+              <img src="/images/logo/logo-no-background.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"/>
             </div>
           </v-col>
           <v-col cols="12" md="4" class="d-flex align-center">
@@ -294,10 +292,10 @@
                       <v-col cols="12">
                         <p class="fs-20">SOCIAL MEDIA</p>
                         <a href="https://www.facebook.com/cavogrecofoods" target="_blank">
-                          <v-icon class="px-2 social-icon" color="white">mdi-facebook</v-icon>
+                          <v-icon class="px-2 social-icon" color="black">mdi-facebook</v-icon>
                         </a>
                         <a href="https://www.instagram.com/cavogrecofoods/" target="_blank">
-                          <v-icon class="px-2 social-icon" color="white">mdi-instagram</v-icon>
+                          <v-icon class="px-2 social-icon" color="black">mdi-instagram</v-icon>
                         </a>
                       </v-col>
                     </v-card>
