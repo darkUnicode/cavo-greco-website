@@ -1,7 +1,14 @@
 <template>
   <div>
     <template>
-      <v-container class="my-5" id="our_foods">
+      <v-container class="my-5" id="our_products">
+        <v-row class="mb-5">
+          <v-col
+              cols="12"
+              class="d-flex align-center justify-center">
+            <h2 class="text-center mb-8 fs-48">Our Products</h2>
+          </v-col>
+        </v-row>
         <v-carousel
             class="customCarousel"
             continuous
@@ -10,7 +17,8 @@
             dark
             delimiter-icon="mdi-minus"
             hide-delimiter-background
-            show-arrows-on-hover
+            :hide-delimiters="hideDelimiters"
+            :show-arrows="false"
         >
 
           <v-carousel-item
@@ -23,8 +31,8 @@
                   md="6"
                   order="1"
                   order-md="0"
-                  class="text-right pa-0 ma-0 secondaryColor"
-                  style="position: relative;">
+                  class="text-right pa-0 ma-0 secondaryColor productsDetails"
+                  style="position: relative; border-radius: 50px 0 0 50px;">
                 <div class="d-flex justify-center align-center mt-10">
                   <v-card-title class="fs-48 text-center" style="word-break: break-word;color: black; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
                 </div>
@@ -33,7 +41,7 @@
                     <p class="my-4 fs-20" style="color: black; font-style: italic">{{ item.subtitle }}</p>
                     <v-row class="text-center mt-3">
                       <v-col cols="12">
-                        <p class="mx-auto" style="color: black;width: 90%;">{{ item.smallDescription }}</p>
+                        <p class="mx-auto" style="color: black; width: 90%;">{{ item.smallDescription }}</p>
                       </v-col>
                     </v-row>
                   </v-card-text>
@@ -56,7 +64,9 @@
                   order-md="1"
                   class="pa-0"
               >
-                <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" contain/>
+                <div style="height: 100%">
+                  <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover class="productImage"/>
+                </div>
               </v-col>
             </v-card>
           </v-carousel-item>
@@ -70,7 +80,7 @@
           <v-col
               cols="12"
               class="d-flex align-center justify-center">
-            <h2 class="text-center mb-8 fs-22">WHO WE ARE</h2>
+            <h2 class="text-center mb-8 fs-48">WHO WE ARE</h2>
           </v-col>
 
           <v-col cols="12" class="text-justify">
@@ -302,14 +312,14 @@
       </v-container>
     </template>
     <ProductsInfoDialog
-          :title.sync="item.title"
-          :subtitle.sync="item.subtitle"
-          :src.sync="item.src"
-          :vegan.sync="item.vegan"
-          :smallDescription.sync="item.smallDescription"
-          :description.sync="item.description"
-          :productsInfoDialog.sync="productsInfoDialog"
-      />
+        :title.sync="item.title"
+        :subtitle.sync="item.subtitle"
+        :src.sync="item.src"
+        :vegan.sync="item.vegan"
+        :smallDescription.sync="item.smallDescription"
+        :description.sync="item.description"
+        :productsInfoDialog.sync="productsInfoDialog"
+    />
 
   </div>
 </template>
@@ -331,7 +341,7 @@ export default {
       phoneNumber: '',
       message: '',
       productsInfoDialog: false,
-      item: []
+      item: [],
     }
   },
   methods: {
@@ -341,13 +351,15 @@ export default {
       this.phoneNumber = '';
       this.message = '';
     },
-    submit() {
-
-    },
     itemInfo(item) {
       this.item = item;
       this.productsInfoDialog = true
 
+    },
+  },
+  computed: {
+    hideDelimiters() {
+      return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
     }
   }
 }

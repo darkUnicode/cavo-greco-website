@@ -5,7 +5,7 @@
         <v-row>
           <v-col md="5">
             <div class="d-flex justify-end align-center" style="height: 100%;">
-              <div><a class="pa-5 navLinks" href="#our_foods">Our Products</a></div>
+              <div><a class="pa-5 navLinks" href="#our_products">Our Products</a></div>
               <div><a class="pa-5 navLinks" href="#who_we_are">Who We Are</a></div>
             </div>
           </v-col>
@@ -69,7 +69,7 @@ export default {
   name: "Header",
   data: () => ({
     items: [
-      {title: 'Our Foods', path: '#our_foods'},
+      {title: 'Our Foods', path: '#our_products'},
       {title: 'Who We Are', path: '#who_we_are'},
       {title: 'Message Us', path: '#message_us'},
       {title: 'Contact Us', path: '#find_us'},
