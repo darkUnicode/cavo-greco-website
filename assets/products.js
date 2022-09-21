@@ -51,6 +51,7 @@ const products = [
 		src: '/images/products/halloumi-fries.jpg',
 		title: 'Halloumi Fries',
 		subtitle: 'QUICK & EASY APPETIZER OR SIDE',
+		vegan: false,
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
@@ -58,6 +59,7 @@ const products = [
 		src: '/images/products/beef-kibbeh.jpg',
 		title: 'Beef Kibbeh',
 		subtitle: '',
+		vegan: true,
 		smallDescription: 'A staple Mediterranean & Middle Eastern dish, also known as Koùpes or Kubbah',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	},
@@ -65,6 +67,7 @@ const products = [
 		src: '/images/products/kibbeh-bites.jpg',
 		title: 'Beef Kibbeh Bites',
 		subtitle: 'The perfect finger food',
+		vegan: false,
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
 		description: `Try it as a:
 		<ul>
@@ -78,6 +81,7 @@ const products = [
 		src: '/images/products/vegan-mushroom-bites.jpg',
 		title: 'Vegan Mushroom Bites',
 		subtitle: 'QUICK & EASY APPETIZER OR PLATTER',
+		vegan: true,
 		smallDescription: '',
 		description: 'Serve with tahini sauce, or plain with lemon.'
 	},
@@ -85,29 +89,33 @@ const products = [
 		src: '/images/products/vegan-hummus-bites.jpg',
 		title: 'Vegan Hummus Bites',
 		subtitle: 'A MODERN TWIST ON A CLASSIC FAVORITE',
+		vegan: true,
 		smallDescription: '',
 		description: 'Hummus is not only for pita.'
 	},
 	{
 		src: '/images/products/premium-stuffed-olives.jpg',
 		title: 'Premium Stuffed Olives',
+		vegan: false,
 		subtitle: 'A GUARANTEED CROWD PLEASER',
 		smallDescription: 'Naturally cured, fleshy colossal olives from Halkidiki, Greece, bathed in our oil free signature brine.',
 		description: `7 SAVORY STUFFINGS:
 		<ul>
-			<li>cheese</li>
-			<li>cheese</li>
-			<li>cheese & herbs</li>
-			<li>ta & oregano</li>
-			<li>ta, jalapēno & chia seeds</li>
-			<li>ta & sundried tomato</li>
-			<li>s & roasted red pepper</li>
+			<li>feta cheese</li>
+			<li>blue cheese</li>
+			<li>goat cheese & herbs</li>
+			<li>ricotta & oregano</li>
+			<li>ricotta, jalapēno & chia seeds</li>
+			<li>ricotta & sundried tomato</li>
+			<li>hummus & roasted red pepper</li>
+			<li>pepper</li>
 			</ul>`
 	},
 	{
 		src: '/images/products/martini-olive-juice.jpg',
 		title: 'Martini Olive Juice',
 		subtitle: 'THE RIGHT INGREDIENT TO MAKE IT DIRTY',
+		vegan: false,
 		smallDescription: 'A highest quality classic mix made with Halkidiki olives.',
 		description: `OLIVE FLAVOR PROFILE:
 		<br>
@@ -125,6 +133,7 @@ const products = [
 		src: '/images/products/pita-pizza-halloumi.jpg',
 		title: 'Halloumi Pita Pizza',
 		subtitle: 'A GOURMET ALTERNATIVE TO MARGHERITA',
+		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
 		description: ''
 	},
@@ -132,6 +141,7 @@ const products = [
 		src: '/images/products/pita-pizza-mozzarella.jpg',
 		title: 'Mozzarella Pita Pizza',
 		subtitle: 'A SKINNY ALTERNATIVE TO MARGHERITA',
+		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
 		description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.'
 	}
