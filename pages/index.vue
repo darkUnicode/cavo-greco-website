@@ -325,7 +325,7 @@
 </template>
 
 <script>
-import products from "assets/products";
+// import products from "assets/products";
 
 export default {
   head: {
@@ -335,7 +335,7 @@ export default {
   },
   data() {
     return {
-      items: products,
+      items: [],
       name: '',
       email: '',
       phoneNumber: '',
@@ -361,6 +361,11 @@ export default {
     hideDelimiters() {
       return this.$vuetify.breakpoint.sm || this.$vuetify.breakpoint.xs;
     }
+  },
+  async created() {
+     await this.$store.dispatch('productsRetrieve').then(response => {
+      this.items = this.$store.getters['getProducts']
+    })
   }
 }
 </script>
