@@ -1,7 +1,7 @@
 <template>
   <div>
     <template>
-<!--      <v-container class="my-5" id="our_products">-->
+      <v-container class="my-5" id="our_products">
         <v-row class="mb-5">
           <v-col
               cols="12"
@@ -9,15 +9,17 @@
             <h2 class="text-center mb-8 fs-48">Our Products</h2>
           </v-col>
         </v-row>
-        <v-carousel v-model="carouselModel"
-                    continuous
-                    :cycle="productsInfoDialog"
-                    interval="4000"
-                    height="100%"
-                    class="customCarousel"
-                    show-arrows-on-hover
-                    delimiter-icon="mdi-minus"
-                    style="border-radius: 25px">
+        <div class="d-flex justify-center align-center">
+          <v-carousel
+            v-model="carouselModel"
+            continuous
+            :cycle="productsInfoDialog"
+            interval="4000"
+            height="100%"
+            class="customCarousel"
+            show-arrows-on-hover
+            delimiter-icon="mdi-minus"
+            style="border-radius: 25px; max-width: 1000px">
           <v-carousel-item
               v-for="(item,i) in items"
               :key="i">
@@ -71,7 +73,7 @@
                       class="pa-0"
                   >
                     <div style="height: 100%; background-position: right">
-                      <v-img :src="item.src" alt="" :lazy-src="item.src" min-height="550px" max-height="550px" max-width="100%" class="productImage" contain style="background-position: right;"/>
+                      <img :src="item.src" alt="" style="min-height:550px; max-height:550px; width:100%; object-fit: cover;" class="productImage"/>
                     </div>
                   </v-col>
                 </v-card>
@@ -79,7 +81,9 @@
             </v-sheet>
           </v-carousel-item>
         </v-carousel>
-<!--      </v-container>-->
+        </div>
+
+      </v-container>
     </template>
 
     <template>

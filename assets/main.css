@@ -16,7 +16,7 @@
     text-align: center;
 }
 .v-image__image{
-    background-position: right !important;
+    /*background-position: right !important;*/
 }
 
 
@@ -49,7 +49,7 @@ a {
 }
 
 .customCarousel {
-    min-height: 527px;
+    /*min-height: 527px;*/
 }
 
 .buttonGroups {
