@@ -87,7 +87,8 @@ a {
     }
 
     .v-carousel__controls {
-        padding-top: 25px;
+        /*padding-top: 25px;*/
+        /*bottom: 25px;*/
     }
 
     .customCarousel {
@@ -130,9 +131,9 @@ a {
 }
 
 @media (min-width: 600px) and (max-width: 959px) {
-    /*#who_we_are {*/
-    /*    margin-top: -215px;*/
-    /*}*/
+   .v-carousel__controls {
+        bottom: 50px !important;
+    }
 
     .container {
         scroll-margin-top: 50px;
