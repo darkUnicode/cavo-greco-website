@@ -3,7 +3,7 @@
     <v-row>
       <v-col
           cols="12" class="text-center">
-        Copyright &copy; {{ new Date().getFullYear() }} Cavo Greco LTD
+        Copyright &copy; {{ new Date().getFullYear() }} CAVO GRECO FOODS
       </v-col>
     </v-row>
 

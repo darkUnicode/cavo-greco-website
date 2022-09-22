@@ -1,7 +1,7 @@
 <template>
   <div>
     <template>
-      <v-container class="my-5" id="our_products">
+<!--      <v-container class="my-5" id="our_products">-->
         <v-row class="mb-5">
           <v-col
               cols="12"
@@ -9,67 +9,77 @@
             <h2 class="text-center mb-8 fs-48">Our Products</h2>
           </v-col>
         </v-row>
-        <v-carousel
-            class="customCarousel"
-            continuous
-            :cycle="!productsInfoDialog"
-            interval="4000"
-            delimiter-icon="mdi-minus"
-            hide-delimiter-background
-            :hide-delimiters="hideDelimiters"
-            :show-arrows="false"
-        >
-
+        <v-carousel v-model="carouselModel"
+                    continuous
+                    :cycle="productsInfoDialog"
+                    interval="4000"
+                    height="100%"
+                    class="customCarousel"
+                    show-arrows-on-hover
+                    delimiter-icon="mdi-minus"
+                    style="border-radius: 25px">
           <v-carousel-item
               v-for="(item,i) in items"
               :key="i">
-            <v-card class="d-flex ma-auto row carouselCard" style="width: 100%; max-width: 1200px; background-color: white;">
-              <v-col
-                  cols="12"
-                  md="6"
-                  order="2"
-                  order-md="1"
-                  class="text-right pa-0 ma-0 mainColor productsDetails"
-                  style="position: relative; border-radius: 50px 0 0 50px;">
-                <div class="d-flex justify-center align-center mt-10">
-                  <v-card-title class="fs-48 text-center" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
-                </div>
-                <div class="d-flex justify-center align-center text-center">
-                  <v-card-text>
-                    <p class="my-4 fs-20" style="color: white; font-style: italic">{{ item.subtitle }}</p>
-                    <v-row class="text-center mt-3">
-                      <v-col cols="12">
-                        <p class="mx-auto" style="color: white; width: 90%;">{{ item.smallDescription }}</p>
-                      </v-col>
-                    </v-row>
-                  </v-card-text>
-                </div>
-<!--                <div class="buttonGroups">-->
-<!--                  <v-btn-->
-<!--                      color="green"-->
-<!--                      dark-->
-<!--                      @click="itemInfo(item)"-->
-<!--                  >-->
-<!--                    Info-->
-<!--                  </v-btn>-->
-<!--                  <v-btn color="mainColor" class="ml-3" href="#message_us">Contact Us</v-btn>-->
-<!--                </div>-->
-              </v-col>
-              <v-col
-                  cols="12"
-                  md="6"
-                  order="1"
-                  order-md="2"
-                  class="pa-0"
-              >
-                <div style="height: 100%">
-                  <v-img :src="item.src" alt="" :lazy-src="item.src" max-height="100%" max-width="100%" cover class="productImage"/>
-                </div>
-              </v-col>
-            </v-card>
+            <v-sheet
+                height="100%"
+                min-height="550px">
+              <v-row
+                  class="fill-height"
+                  align="center"
+                  justify="center">
+                <v-card class="d-flex ma-auto row carouselCard mainColor" style="width: 100%;  box-shadow: none;">
+                  <v-col
+                      cols="12"
+                      md="6"
+                      order="1"
+                      order-md="0"
+                      class=" pa-0 ma-0 mainColor productsDetails"
+                      style="position: relative; min-height: 550px; height: 100%">
+                    <div style="height: 100%;">
+                      <v-row>
+                        <v-col>
+                          <v-card-title class="fs-48 text-center d-flex align-start justify-center my-10" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                        </v-col>
+                      </v-row>
+
+
+                      <v-row>
+                        <v-col
+                            class="d-flex justify-center align-center"
+                            style="height: 100%">
+                          <v-card-text class="secondaryColor text-center mt-5" style="border-radius: 50px; width: 90%;">
+                            <v-row class="text-center mt-3">
+                              <v-col cols="12" v-if="item.subtitle">
+                                <p class="my-4 fs-20 archdauFont" style="color: black; font-style: italic">{{ item.subtitle }}</p>
+                              </v-col>
+
+                              <v-col cols="12">
+                                <p class="mx-auto archdauFont" style="color: black; width: 90%;">{{ item.smallDescription }}</p>
+                              </v-col>
+                            </v-row>
+                          </v-card-text>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-col>
+                  <v-col
+                      cols="12"
+                      md="6"
+                      order="0"
+                      order-md="1"
+                      class="pa-0"
+                  >
+                    <div style="height: 100%; background-position: right">
+                      <v-img :src="item.src" alt="" :lazy-src="item.src" min-height="550px" max-height="550px" max-width="100%" class="productImage" contain style="background-position: right;"/>
+                    </div>
+                  </v-col>
+                </v-card>
+              </v-row>
+            </v-sheet>
           </v-carousel-item>
         </v-carousel>
-      </v-container>
+<!--      </v-container>-->
     </template>
 
     <template>
@@ -78,7 +88,7 @@
           <v-col
               cols="12"
               class="d-flex align-center justify-center">
-            <h2 class="text-center mb-8 fs-48">WHO WE ARE</h2>
+            <h2 class="text-center mb-8 fs-48 font-weight-bold">WHO WE ARE</h2>
           </v-col>
 
           <v-col cols="12" class="text-justify">
@@ -106,7 +116,7 @@
             </p>
           </v-col>
           <v-col cols="12" md="4" class="d-flex justify-center align-center">
-            <div style="border: 1px solid black" class="pa-4">
+            <div class="pa-4">
               <img src="/images/logo/logo-no-background.png" alt="cavo greco" width="100%" style="max-width: 320px; min-width: 187px;"/>
             </div>
           </v-col>
@@ -151,7 +161,7 @@
                 style="border-radius: 15px !important;"
             >
               <v-card-title class="d-flex justify-center">
-                <h2 class="fs-22">DROP US A MESSAGE</h2>
+                <h2 class="fs-22 font-weight-bold">DROP US A MESSAGE</h2>
               </v-card-title>
               <v-card-text>
                 <ValidationObserver ref="observer" v-slot="{ invalid, handleSubmit  }">
@@ -210,19 +220,15 @@
                       <v-col>
                       </v-col>
                     </v-row>
-                    <div class="g-recaptcha" data-sitekey="6LfnbaghAAAAAJpubPwmenjYK1gwAmgB7mxVAQeW"></div>
+                    <!--                    <div class="g-recaptcha" data-sitekey="6LfnbaghAAAAAJpubPwmenjYK1gwAmgB7mxVAQeW"></div>-->
                     <v-row class="py-5">
                       <v-col>
                         <v-btn
                             class="mr-4"
                             color="green"
+                            style="color: white;"
                             type="submit">
                           submit
-                        </v-btn>
-                        <v-btn
-                            color="#616161"
-                            @click="clear">
-                          clear
                         </v-btn>
                       </v-col>
                     </v-row>
@@ -324,13 +330,14 @@
 // import products from "assets/products";
 
 export default {
-  head: {
-    script: [
-      {type: 'text/javascript', src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true},
-    ],
-  },
+  // head: {
+  //   script: [
+  //     {type: 'text/javascript', src: 'https://www.google.com/recaptcha/api.js', async: true, defer: true},
+  //   ],
+  // },
   data() {
     return {
+      carouselModel: 0,
       items: [],
       name: '',
       email: '',
@@ -350,7 +357,6 @@ export default {
     itemInfo(item) {
       this.item = item;
       this.productsInfoDialog = true
-
     },
   },
   computed: {
@@ -359,7 +365,7 @@ export default {
     }
   },
   async created() {
-     await this.$store.dispatch('productsRetrieve').then(response => {
+    await this.$store.dispatch('productsRetrieve').then(response => {
       this.items = this.$store.getters['getProducts']
     })
   }
