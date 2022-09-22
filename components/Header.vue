@@ -36,8 +36,7 @@
                 <v-menu offset-y>
                   <template v-slot:activator="{ on, attrs }">
                     <v-btn
-                        color="white"
-                        dark
+                        color="black"
                         icon
                         v-bind="attrs"
                         v-on="on"
@@ -90,7 +89,7 @@ export default {
 .navImageWrapper {
   width: 150px;
   /*background-color: white;*/
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   padding: 10px;
 }
 
