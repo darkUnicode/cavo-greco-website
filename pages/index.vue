@@ -17,6 +17,7 @@
             interval="4000"
             height="100%"
             class="customCarousel"
+            hide-delimiter-background
             show-arrows-on-hover
             delimiter-icon="mdi-minus"
             style="border-radius: 25px; max-width: 1000px">
@@ -41,7 +42,7 @@
                     <div style="height: 100%;">
                       <v-row>
                         <v-col>
-                          <v-card-title class="fs-48 text-center d-flex align-start justify-center my-10" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                          <v-card-title class="fs-40 text-center d-flex align-center justify-center mt-10" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
                         </v-col>
                       </v-row>
 
