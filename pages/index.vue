@@ -42,7 +42,7 @@
                     <div style="height: 100%;">
                       <v-row>
                         <v-col>
-                          <v-card-title class="fs-40 text-center d-flex align-center justify-center mt-10" style="word-break: break-word;color: white; line-height: 1.5;">{{ item.title.toUpperCase() }}</v-card-title>
+                          <v-card-title class="fs-40 text-center d-flex align-center justify-center mt-10" style="word-break: break-word; white-space: pre; color: white; line-height: 1.5;" >{{ item.title.toUpperCase() }}</v-card-title>
                         </v-col>
                       </v-row>
 
