@@ -1,7 +1,7 @@
 const products = [
 	{
 		src: '/images/products/halloumi-ravioli.jpg',
-		title: 'Halloumi Ravioli',
+		title: `Halloumi \n Ravioli`,
 		subtitle: '',
 		vegan: false,
 		smallDescription: 'Cypriot pasta specialty, filled with premium halloumi & flavored with dried mint leaves.',
@@ -9,7 +9,7 @@ const products = [
 	},
 	{
 		src: '/images/products/sundried-tomato-ravioli.jpg',
-		title: 'Sundried Tomato Ravioli',
+		title: 'Sundried Tomato \n Ravioli',
 		subtitle: '',
 		smallDescription: 'Our signature ravioli bursting with flavors of sundried tomato, fresh basil leaves, and luscious ricotta cheese.',
 		vegan: false,
@@ -17,7 +17,7 @@ const products = [
 	},
 	{
 		src: '/images/products/vegan-artichoke-ravioli.jpg',
-		title: 'Vegan Artichoke Ravioli',
+		title: 'Vegan Artichoke \n Ravioli',
 		subtitle: '',
 		vegan: true,
 		smallDescription: 'A zesty, flavorful, refreshing vegan pasta, filled with baby artichoke hearts & a pureé of garlic confit, elevated by the aromas of fresh dill & lemon zest.',
@@ -25,7 +25,7 @@ const products = [
 	},
 	{
 		src: '/images/products/creamy-spinach-ravioli.jpg',
-		title: 'Creamy Spinach Ravioli',
+		title: 'Creamy Spinach \n Ravioli',
 		subtitle: '',
 		vegan: false,
 		smallDescription: 'A creamy, rich, and silky twist of the classic favorite comfort food.',
@@ -33,7 +33,7 @@ const products = [
 	},
 	{
 		src: '/images/products/four-cheese-ravioli.jpg',
-		title: 'Four Cheese Ravioli',
+		title: 'Four Cheese \n Ravioli',
 		subtitle: '',
 		vegan: false,
 		smallDescription: 'A delightful combination of four Mediterranean cheeses that create the ideal balance of flavors and textures: ricotta, mozzarella, parmesan, gorgonzola.',
@@ -41,7 +41,7 @@ const products = [
 	},
 	{
 		src: '/images/products/vegan-mushroom-ravioli.jpg',
-		title: 'Vegan Mushroom Ravioli',
+		title: 'Vegan Mushroom \n Ravioli',
 		subtitle: '',
 		vegan: true,
 		smallDescription: 'One of our signature vegan pasta, filled with a portabello mushroom & balsamic caramelized onion pâté, and seasoned with fresh garden herbs',
@@ -49,7 +49,7 @@ const products = [
 	},
 	{
 		src: '/images/products/halloumi-fries.jpg',
-		title: 'Halloumi Fries',
+		title: 'Halloumi \n Fries',
 		subtitle: 'QUICK & EASY APPETIZER OR SIDE',
 		vegan: false,
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
@@ -57,7 +57,7 @@ const products = [
 	},
 	{
 		src: '/images/products/beef-kibbeh.jpg',
-		title: 'Beef Kibbeh',
+		title: 'Beef \n Kibbeh',
 		subtitle: '',
 		vegan: true,
 		smallDescription: 'A staple Mediterranean & Middle Eastern dish, also known as Koùpes or Kubbah',
@@ -65,7 +65,7 @@ const products = [
 	},
 	{
 		src: '/images/products/kibbeh-bites.jpg',
-		title: 'Beef Kibbeh Bites',
+		title: 'Beef Kibbeh \n Bites',
 		subtitle: 'The perfect finger food',
 		vegan: false,
 		smallDescription: 'The most mouthwatering delicacy of the modern era',
@@ -79,7 +79,7 @@ const products = [
 	},
 	{
 		src: '/images/products/vegan-mushroom-bites.jpg',
-		title: 'Vegan Mushroom Bites',
+		title: 'Vegan Mushroom \n Bites',
 		subtitle: 'QUICK & EASY APPETIZER OR PLATTER',
 		vegan: true,
 		smallDescription: '',
@@ -87,7 +87,7 @@ const products = [
 	},
 	{
 		src: '/images/products/vegan-hummus-bites.jpg',
-		title: 'Vegan Hummus Bites',
+		title: 'Vegan Hummus \n Bites',
 		subtitle: 'A MODERN TWIST ON A CLASSIC FAVORITE',
 		vegan: true,
 		smallDescription: '',
@@ -95,7 +95,7 @@ const products = [
 	},
 	{
 		src: '/images/products/premium-stuffed-olives.jpg',
-		title: 'Premium Stuffed Olives',
+		title: 'Premium Stuffed \n Olives',
 		vegan: false,
 		subtitle: 'A GUARANTEED CROWD PLEASER',
 		smallDescription: 'Naturally cured, fleshy colossal olives from Halkidiki, Greece, bathed in our oil free signature brine.',
@@ -113,7 +113,7 @@ const products = [
 	},
 	{
 		src: '/images/products/martini-olive-juice.jpg',
-		title: 'Martini Olive Juice',
+		title: 'Martini Olive \n Juice',
 		subtitle: 'THE RIGHT INGREDIENT TO MAKE IT DIRTY',
 		vegan: false,
 		smallDescription: 'A highest quality classic mix made with Halkidiki olives.',
@@ -131,7 +131,7 @@ const products = [
 	},
 	{
 		src: '/images/products/pita-pizza-halloumi.jpg',
-		title: 'Halloumi Pita Pizza',
+		title: 'Halloumi Pita \n Pizza',
 		subtitle: 'A GOURMET ALTERNATIVE TO MARGHERITA',
 		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
@@ -139,7 +139,7 @@ const products = [
 	},
 	{
 		src: '/images/products/pita-pizza-mozzarella.jpg',
-		title: 'Mozzarella Pita Pizza',
+		title: 'Mozzarella Pita \n Pizza',
 		subtitle: 'A SKINNY ALTERNATIVE TO MARGHERITA',
 		vegan: false,
 		smallDescription: 'With gooey cheese and a vibrant tomato sauce.',
@@ -147,7 +147,7 @@ const products = [
 	},
 	{
 		src: '/images/products/pita-pizza-feta.jpg',
-		title: 'Feta Pita Pizza',
+		title: 'Feta Pita \n Pizza',
 		subtitle: '[subtitle]',
 		vegan: false,
 		smallDescription: '[desc]',
